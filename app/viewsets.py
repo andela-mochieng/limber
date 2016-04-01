@@ -541,7 +541,7 @@ class PasswordResetViewSet(viewsets.ModelViewSet):
 				return Response(
 					{
 						'status': 'User with specified email does not exist'
-					}, status=status.HTTP_400_BAD_REQUEST
+					}, status=status.HTTP_404_NOT_FOUND
 				)
 		else:
 			data['user'] = request.data.get('user')
